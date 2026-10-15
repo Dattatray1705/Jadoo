@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronUp, ChevronDown } from "lucide-react";
-
+import testimonialImage from "../assets/Group 64.png";
 export default function Testimonials() {
   return (
     <section
@@ -34,8 +34,16 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Review card */}
-<img src="/src/assets/Group 64.png" alt="" />
-      </div>
+{/* Review card */}
+<motion.img
+  src={testimonialImage}
+  alt="Customer testimonial"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="block h-auto w-full max-w-[650px] object-contain"
+/>      </div>
     </section>
   );
 }
